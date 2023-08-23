@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-    users = User.all
+    users = User.where.not(account_number: "0000001")
     render json: users
   end
 
@@ -10,6 +10,16 @@ class UsersController < ApplicationController
     user_params[:image]
     p "+++++++++++++++++"
     user.save
+  end
+
+  def show
+    user = User.find(params[:id])
+    render json: user
+  end
+
+  def first_user
+    user = User.first
+    render json: user
   end
 
 private
