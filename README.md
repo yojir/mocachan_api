@@ -41,8 +41,3 @@ production:
 ```
 docker compose run api rails db:create
 ```
-### front(React)側
-1. reactプロジェクトの作成
-```
-docker compose run --rm front sh -c "npm install -g create-react-app && create-react-app reactapp"
-```
