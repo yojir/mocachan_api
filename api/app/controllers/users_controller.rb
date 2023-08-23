@@ -1,6 +1,19 @@
 class UsersController < ApplicationController
   def index
-    user = User.first
-    render json: user
+    users = User.all
+    render json: users
+  end
+
+  def create
+    user = User.new(user_params)
+    p "-----------------"
+    user_params[:image]
+    p "+++++++++++++++++"
+    user.save
+  end
+
+private
+  def user_params
+    params.permit(:name, :image, :account_number, :money)
   end
 end
