@@ -22,3 +22,5 @@
 
 # Ignore master key for decrypting credentials and more.
 /api/config/master.key
+
+/api/public/uploads/user/image
