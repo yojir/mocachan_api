@@ -17,6 +17,6 @@ class RemittanceHistoriesController < ApplicationController
 
 private
   def remittance_params
-    params.permit(:src_id, :dst_id, :amount)
+    params.permit(:src_id, :dst_id, :amount, :message)
   end
 end

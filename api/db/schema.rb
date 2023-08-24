@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_23_134641) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_24_023405) do
   create_table "remittancehistories", charset: "utf8mb3", force: :cascade do |t|
     t.integer "src_id"
     t.integer "dst_id"
     t.integer "amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "message"
     t.index ["dst_id"], name: "index_remittancehistories_on_dst_id"
     t.index ["src_id"], name: "index_remittancehistories_on_src_id"
   end
